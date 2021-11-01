@@ -2,7 +2,8 @@ package com.example;
 
 import java.util.List;
 
-public class Lion {
+public class Lion extends Animal implements KittensCount {
+
 
     boolean hasMane;
 
@@ -12,14 +13,17 @@ public class Lion {
         } else if ("Самка".equals(sex)) {
             hasMane = false;
         } else {
-            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
+            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
 
-    Feline feline = new Feline();
-
+    @Override
     public int getKittens() {
-        return feline.getKittens();
+        return getKittensCount(1);
+    }
+    @Override
+    public int getKittensCount(int kittensCount) {
+        return kittensCount;
     }
 
     public boolean doesHaveMane() {
@@ -27,6 +31,7 @@ public class Lion {
     }
 
     public List<String> getFood() throws Exception {
-        return feline.getFood("Хищник");
+        return getFood("Хищник");
     }
+
 }
