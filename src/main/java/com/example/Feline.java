@@ -16,10 +16,10 @@ public class Feline extends Animal implements Predator,KittensCount {
 
     @Override
     public int getKittens() {
-        return getKittensCount(1);
+        return setKittensCount(1);
     }
     @Override
-    public int getKittensCount(int kittensCount) {
+    public int setKittensCount(int kittensCount) {
         return kittensCount ;
     }
 

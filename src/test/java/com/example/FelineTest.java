@@ -2,12 +2,9 @@ package com.example;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.Arrays;
 import java.util.List;
-
 import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -39,7 +36,7 @@ public class FelineTest {
 
     @Test
     public void getKittensCountTest() {
-        int actual = feline.getKittensCount(2);
+        int actual = feline.setKittensCount(2);
         int expected = 2;
         assertEquals(expected, actual);
     }

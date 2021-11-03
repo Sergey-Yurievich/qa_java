@@ -41,7 +41,7 @@ public class LionTest {
     @Test
     public void getKittensCountTest() throws Exception {
         Lion lion = new Lion(sex);
-        int actual = lion.getKittensCount(1);
+        int actual = lion.setKittensCount(1);
         int expected = 1;
         assertEquals(expected, actual);
     }
