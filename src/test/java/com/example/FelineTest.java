@@ -26,16 +26,17 @@ public class FelineTest {
         String expected = "Кошачьи";
         assertEquals(expected, actual);
     }
-
+    //Проверка метода getKittensCount
     @Test
-    public void getKittensTest() {
-        int actual = feline.getKittens();
+    public void getKittensCountTest() {
+        int actual = feline.getKittensCount();
         int expected = 1;
         assertEquals(expected,actual);
     }
 
+    //Проверка метода setKittensCount
     @Test
-    public void getKittensCountTest() {
+    public void setKittensCountTest() {
         int actual = feline.setKittensCount(2);
         int expected = 2;
         assertEquals(expected, actual);

@@ -2,12 +2,13 @@ package com.example;
 
 import java.util.List;
 
-public class Lion extends Animal implements KittensCount {
+public class Lion extends Animal {
 
-
+    private final Feline feline;
     boolean hasMane;
 
-    public Lion(String sex) throws Exception {
+    public Lion(String sex, Feline feline) throws Exception {
+        this.feline = feline;
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
@@ -17,13 +18,8 @@ public class Lion extends Animal implements KittensCount {
         }
     }
 
-    @Override
-    public int getKittens() {
-        return setKittensCount(1);
-    }
-    @Override
-    public int setKittensCount(int kittensCount) {
-        return kittensCount;
+    public int getKittensCount() {
+        return this.feline.getKittensCount();
     }
 
     public boolean doesHaveMane() {

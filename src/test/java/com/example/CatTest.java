@@ -15,6 +15,7 @@ public class CatTest {
     @Mock
     Feline feline;
 
+    //Проверка метода getSound
     @Test
     public void getSoundTest() {
         Cat cat = new Cat(feline);
@@ -22,7 +23,7 @@ public class CatTest {
         String expected = "Мяу";
         assertEquals(expected,actual);
     }
-
+    //Проверка метода getFood
     @Test()
     public void getFoodTest() throws Exception {
         Cat cat = new Cat(feline);
